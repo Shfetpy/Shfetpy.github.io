@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="assets/css/style.css" />
+	<title>Shrimp Roms | stay fluid!</title>
+</head>
+<body>
+	<video class="bg-video" preload="auto" autoplay="true" loop="loop" muted="true" volume="0">
+		<source src="assets/media/video.webm" type="video/webm" />
+		<source src="assets/media/video.mp4" type="video/mp4" />
+	</video>
+	<div class="chains"></div>
+	<canvas id="c"></canvas>
+	<div class="ct">
+	<div class="p">
+	<script>
+		function preventSelection(element){
+		var preventSelection = false;
+		function addHandler(element, event, handler){
+		if (element.attachEvent) element.attachEvent('on' + event, handler);
+		else if (element.addEventListener) element.addEventListener(event, handler, false);  }
+		function removeSelection(){
+		if (window.getSelection) { window.getSelection().removeAllRanges(); }
+		else if (document.selection && document.selection.clear)
+		document.selection.clear();
+		}
+
+		document.oncontextmenu = cmenu; function cmenu() { return false; }
+
+		function killCtrlA(event){
+		var event = event || window.event;
+		var sender = event.target || event.srcElement;
+		if (sender.tagName.match(/INPUT|TEXTAREA/i)) return;
+		var key = event.keyCode || event.which;
+		if ((event.ctrlKey && key == 'U'.charCodeAt(0)) || (event.ctrlKey && key == 'A'.charCodeAt(0)) || (event.ctrlKey && key == 'S'.charCodeAt(0)))
+		{ removeSelection();
+		if (event.preventDefault) event.preventDefault();
+		else event.returnValue = false;}}
+		addHandler(element, 'keydown', killCtrlA);
+		addHandler(element, 'keyup', killCtrlA);
+		}
+		preventSelection(document);
+	</script>
+	<script type="text/javascript">
+		document.onkeydown = function(e) {
+		if(event.keyCode == 123) {
+		return false;
+		}
+		if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
+		return false;
+		}
+		}
+	</script>
+
+	<div class='brand'>
+		<span id='text'></span>
+		<div class='console-underscore' id='console'>
+			&#95;
+		</div>
+	</div>
+
+	<div class="links">
+		<a href="https:/https://t.me/kvmrnnroms" class="link br-1">Channel Link</a>
+		<a href="https://https://t.me/Shrimpychat" class="link br-2">TG Group</a>
+		<a href="https://t.me/kvmrnnroms/48" class="link pm-1">Latest build</a>
+	</div>
+
+<div class="bg"></div>
+<audio class="bg-audio" preload="auto" autoplay="true" loop="loop" volume="1">
+	<source src="assets/media/audio.mp3" />
+</audio>
+<script src="assets/js/media.js"></script>
+<script src="assets/js/nameoffile.html"></script>
+<script src="assets/js/wave.js"></script>
+<script src="assets/js/1text.js"></script>
+</div>
+
+</body>
+</html>
